@@ -26,7 +26,7 @@ export default `<!doctype html>
     <meta name="twitter:site" content="@fluxia-ai">
     <meta name="twitter:title" content="Fluxia - AI-Powered Business Automation Platform">
     <meta name="twitter:description" content="Fluxia replaces repetitive workflows with intelligent automation. Deploy AI agents in minutes to streamline operations, boost productivity, and scale your business.">
-    <meta name="twitter:image" content="https://fluxia-ai.vercel.app/assets/og-2.png">
+    <meta name="twitter:image" content="https://fluxia-ai.vercel.app/og-2.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
