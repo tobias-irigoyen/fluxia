@@ -10,7 +10,7 @@ export default `<!doctype html>
     <link rel="manifest" href="/site.webmanifest">
     <meta name="author" content="Fluxia"/>
     <meta name="robots" content="index, follow"/>
-    <meta name="canonical" content="https://fluxia-ai.vercel.app/"/>
+    <link rel="canonical" href="https://fluxia-ai.vercel.app/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website"/>
@@ -29,8 +29,11 @@ export default `<!doctype html>
     <meta name="twitter:image" content="https://fluxia-ai.vercel.app/og-2.png"/>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -45,7 +48,7 @@ export default `<!doctype html>
         "name": "Fluxia",
         "alternateName": "Fluxia AI",
         "description": "AI-powered business automation platform that replaces repetitive workflows with intelligent automation. Deploy AI agents in minutes to streamline operations, boost productivity, and scale your business.",
-        "url": "fluxia-ai.vercel.app",
+        "url": "https://fluxia-ai.vercel.app"
         "logo": "https://fluxia-ai.vercel.app/logo.png",
         "image": "https://fluxia-ai.vercel.app/og.png",
         "sameAs": [
