@@ -1,0 +1,8 @@
+<article class="flex flex-col justify-center items-center">
+  <div [ngClass]="iconBackground" class="w-16 h-16 rounded-2xl flex justify-center items-center relative mb-6">
+    <i-lucide [color]="iconColor" [name]="icon" class="w-6 h-6"></i-lucide>
+    <span class="absolute top-[-5px] right-[-10px] text-[.85rem] bg-white text-[#155dfc] font-bold w-7 h-7 rounded-full flex items-center justify-center border border-[2px solid #8ab1ff]">{{ stepIndicator }}</span>
+  </div>
+  <h3 class="font-bold text-[1.05rem] mb-2">{{ title }}</h3>
+  <p class="text-gray-500 text-[.875rem] leading-[1.75] text-center">{{ lead }}</p>
+</article>

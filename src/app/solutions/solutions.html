@@ -1,0 +1,20 @@
+<div class="flex flex-col justify-center items-center justify-center max-[992px]:max-w-[100%] px-[20px] max-w-[1280px] w-full mx-auto min-h-[calc(100vh-64px)] pb-16">
+    <app-section-heading
+        subheading="Our products"
+        title="Everything you need to automate with confidence"
+        lead="A modular suite of AI tools designed to work alone or together — adapting to your business as you grow.">
+    </app-section-heading>
+    <div class="grid grid-cols-3 gap-4 max-[992px]:grid-cols-2 max-[768px]:grid-cols-1">
+        <article *ngFor="let solution of solutions" class="flex flex-col items-start bg-white p-8 rounded-md hover:translate-y-[-5px] hover:shadow-[2px_2px_5px_rgba(0,0,0,0.1)] transition-all duration-300 border border-[#ececec]">
+            <div [style.background-color]="solution.iconBackground" class="w-8 h-8 flex items-center justify-center rounded-md mb-4 max-[992px]:w-12 max-[992px]:h-12">
+                <i-lucide [style.color]="solution.iconColor" [name]="solution.icon" class="w-4 h-4 max-[992px]:w-6 max-[992px]:h-6"></i-lucide>
+            </div>
+            <header>
+                <h3 class="font-semibold text-gray-900">{{ solution.title }}</h3>
+                <span class="text-gray-400 text-[.75rem] block mb-3">{{ solution.subtitle }}</span>
+            </header>
+            <p class="text-gray-500 text-[.9rem]">{{ solution.description }}</p>
+        </article>
+    </div>
+
+</div>

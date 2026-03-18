@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+#use-cases,
+#pricing {
+  padding-top: 30px;
+  z-index: 1;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,11 @@
+<div [ngClass]="[ctaBackgroundColor ? ctaBackgroundColor : 'bg-gradient-to-r from-blue-600 to-violet-600', flexDirection, alignItems, gap]" class="testing flex items-center justify-between max-[768px]:flex-col max-[768px]:gap-8 max-[768px]:items-start p-10 rounded-2xl">
+    <div>
+        <h3 [ngClass]="titleColor ? titleColor : 'text-white'" class="text-[1.1rem] font-bold mb-2">{{ title }}</h3>
+        <p [ngClass]="leadColor ? leadColor : 'text-[rgba(255,255,255,.85)]'">{{ lead }}</p>
+    </div>
+    <button (click)="btnFunctionName('contact')" [ngClass]="[btnBackgroundColor ? btnBackgroundColor : 'bg-[#155dfc]', btnColor, btnHoverBackgroundColor]" class="flex justify-center items-center gap-2 font-semibold px-7 py-3 max-w-max rounded-2xl transition-all duration-300 cursor-pointer max-[768px]:w-full max-[768px]:max-w-none">
+        <i-lucide *ngIf="btnLeftIcon" [color]="btnLeftIconColor" [name]="btnLeftIcon"></i-lucide>
+        {{ btnContent}}
+        <i-lucide *ngIf="btnRightIcon" [color]="btnRightIconColor" [name]="btnRightIcon"></i-lucide>
+    </button>
+</div>

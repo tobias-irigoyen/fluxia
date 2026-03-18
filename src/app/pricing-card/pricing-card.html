@@ -1,0 +1,28 @@
+<div [ngClass]="[isMostPopular ? 'bg-[#155dfc]' : 'bg-white', isMostPopular ? '-translate-y-[30px]' : '']" class="rounded-2xl p-8 h-full flex flex-col border border-gray-200 relative max-[768px]:translate-y-0">
+  <div *ngIf="isMostPopular" class="flex items-center gap-1.5 absolute top-[-15px] left-0 right-0 mx-auto bg-[#ffb900] rounded-full max-w-max px-4 py-1.5 shadow-md" >
+    <i-lucide [img]="Zap" class="fill-[black] text-black w-[0.85rem] h-[0.85rem]"></i-lucide>
+    <span class="text-gray-900 text-[0.75rem] font-bold">{{ tagName }}</span>
+  </div>
+  
+  <h3 [ngClass]="isMostPopular ? 'text-white' : 'text-gray-900'" class="font-bold text-[1.2rem]">Starter</h3>
+  <p [ngClass]="isMostPopular ? 'text-[#fff]' : 'text-gray-500'" class="leading-[1.6] text-[.875rem] mb-4">
+    {{ lead }}
+  </p>
+
+  <div class="flex items-end gap-1 mb-6">
+    <span [ngClass]="[isMostPopular ? 'text-white' : 'text-gray-900', isSmallPrice ? 'text-[2rem]' : 'text-[3rem]']" class="font-bold">{{ price }}</span>
+    <span [ngClass]="isMostPopular ? 'text-[#fff]' : 'text-gray-400'" class="text-[.9rem] mb-6">{{ pricePeriod }}</span>
+  </div>
+
+  <ul class="mb-12">
+    <li class="flex items-center gap-2 mb-4" *ngFor="let feature of featuresList">
+      <i-lucide [img]="featureIcon" [ngClass]="isMostPopular ? 'text-[#fff]' : 'text-[#2b7fff]'" class="w-4 h-4"></i-lucide>
+      <span [ngClass]="isMostPopular ? 'text-[#fff]' : 'text-gray-600'" class="text-[.875rem]">{{ feature }}</span>
+    </li>
+  </ul>
+
+  <button (click)="btnFunctionName(functionParams)" [ngClass]="{
+  'text-[#155dfc] bg-white hover:bg-[#c7c7c7]': isMostPopular,
+  'text-white bg-[#155dfc] hover:bg-[#1447e6]': !isMostPopular
+}" class="rounded-xl py-3 mt-auto cursor-pointer w-full text-center text-[.9rem] font-semibold transition-all duration-300">{{ btnContent }}</button>
+</div>

@@ -1,0 +1,89 @@
+<footer>
+  <div class="bg-gray-900 flex flex-col justify-center align-center px-6 pt-16 pb-8">
+    <div
+      class="grid grid-cols-5 gap-24 mx-auto mb-14 max-w-[1280px] max-[992px]:grid-cols-2 max-[768px]:grid-cols-1 max-[768px]:gap-12"
+    >
+      <div class="flex flex-col">
+        <button (click)="scrollToTop()" class="flex items-center gap-2 mb-5 cursor-pointer">
+          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="white"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-zap text-white"
+            >
+              <path
+                d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+              />
+            </svg>
+          </div>
+
+          <h4 class="text-white text-[1.125rem] font-bold tracking-[-0.02em]">
+            {{ footerInfo.firstColumn.title }}
+          </h4>
+        </button>
+        <p class="text-gray-400 text-[.875rem] mb-6">{{ footerInfo.firstColumn.lead }}</p>
+        <ul class="flex justify-start gap-4">
+          <li *ngFor="let icon of footerInfo.firstColumn.icons">
+            <a
+              [href]="icon.href"
+              class="w-9 h-9 rounded-lg bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-colors duration-200"
+            > <span class="sr-only">{{ icon.title }}</span>
+              <i-lucide [img]="icon.icon" class="text-white w-4 h-4"></i-lucide>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div *ngFor="let column of footerInfo.columns">
+        <h5 class="uppercase text-white font-semibold text-[.8rem] mb-5">{{ column.title }}</h5>
+        <ul class="space-y-3">
+          <li *ngFor="let link of column.links">
+            <button
+              *ngIf="column.isScroll"
+              (click)="scrollToSection(link.href)"
+              class="text-gray-400 hover:text-white transition-colors duration-200 text-[.875rem] cursor-pointer"
+            >
+              {{ link.title }}
+            </button>
+
+            <a
+              *ngIf="!column.isScroll"
+              [href]="link.href"
+              class="text-gray-400 hover:text-white transition-colors duration-200 text-[.875rem]"
+            >
+              {{ link.title }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="flex justify-between pt-8 max-w-[1280px] mx-auto w-full border-t-1 border-[#1e2939] max-[768px]:flex-col max-[768px]:justify-center max-[768px]:align-center max-[768px]:text-center"
+    >
+      <p class="text-gray-400 text-[.8rem] max-[768px]:mb-6">
+        {{ footerInfo.subFooter.copyright }}
+      </p>
+      <p class="text-gray-400 text-[.8rem] max-[768px]:hidden">
+        Made with 🤍 by <a href="https://tobiasirigoyen.dev" class="underline">Tobías Irigoyen</a>
+      </p>
+      <ul class="flex gap-4 max-[768px]:mx-auto max-[768px]:mb-10">
+        <li *ngFor="let rightLink of footerInfo.subFooter.rightLinks">
+          <a
+            [href]="rightLink.href"
+            class="text-gray-400 hover:text-white transition-colors duration-200 text-[.8rem] max-[768px]:mb-6"
+            >{{ rightLink.title }}</a
+          >
+        </li>
+      </ul>
+      <p class="text-gray-400 text-[.75rem] min-[769px]:hidden">
+        Made with 🤍 by <a href="https://tobiasirigoyen.dev" class="underline">Tobías Irigoyen</a>
+      </p>
+    </div>
+  </div>
+</footer>
